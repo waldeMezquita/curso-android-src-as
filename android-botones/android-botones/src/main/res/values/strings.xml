@@ -8,5 +8,8 @@
     <string name="on">On</string>
     <string name="off">Off</string>
     <string name="icono_ok">icono-ok</string>
+    <string name="Aceptar">Aceptar</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="texto_de_prueba">Texto de prueba</string>
 
 </resources>

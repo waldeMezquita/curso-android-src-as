@@ -1,6 +1,6 @@
 package net.sgoliver.android.botones;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 
     private TextView lblMensaje;
     private Button btnBoton1;
@@ -18,6 +18,9 @@ public class MainActivity extends ActionBarActivity {
     private ToggleButton btnBoton2;
     private ImageButton btnBoton3;
     private ToggleButton btnBoton4;
+    private ImageButton btnSinBorde;
+    private Button btnAceptar;
+    private Button btnCancelar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,11 +79,38 @@ public class MainActivity extends ActionBarActivity {
                     lblMensaje.setText("Botón 4: OFF");
             }
         });
+
+        btnSinBorde = (ImageButton)findViewById(R.id.BtnSinBorde);
+
+        btnSinBorde.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0)
+            {
+                lblMensaje.setText("Botón Sin Borde pulsado!");
+            }
+        });
+
+        btnAceptar = (Button)findViewById(R.id.BtnAceptar);
+
+        btnAceptar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0)
+            {
+                lblMensaje.setText("Botón Aceptar pulsado!");
+            }
+        });
+
+        btnCancelar = (Button)findViewById(R.id.BtnCancelar);
+
+        btnCancelar.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0)
+            {
+                lblMensaje.setText("Botón Cancelar pulsado!");
+            }
+        });
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        
+
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
@@ -97,5 +127,4 @@ public class MainActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

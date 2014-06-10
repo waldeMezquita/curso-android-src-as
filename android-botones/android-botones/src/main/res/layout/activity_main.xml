@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,43 +6,97 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
     tools:context="net.sgoliver.android.botones.MainActivity">
 
     <TextView android:id="@+id/LblMensaje"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
 
     <Button android:id="@+id/BtnBoton1"
         android:text="@string/click"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/LblMensaje" />
 
     <Button android:id="@+id/BtnBoton5"
         android:text="@string/click"
-        android:drawableLeft="@drawable/ic_icono_ok"
+        android:drawableLeft="@drawable/ic_estrella"
         android:drawablePadding="5dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BtnBoton1" />
 
     <ToggleButton android:id="@+id/BtnBoton2"
         android:textOn="@string/on"
         android:textOff="@string/off"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BtnBoton5" />
 
     <ImageButton android:id="@+id/BtnBoton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/icono_ok"
-        android:padding="12dp"
-        android:src="@drawable/ic_icono_ok" />
+        android:src="@drawable/ic_estrella"
+        android:layout_below="@id/BtnBoton2" />
 
     <ToggleButton android:id="@+id/BtnBoton4"
         android:textOn="@string/on"
         android:textOff="@string/off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/toggle_style"/>
+        android:background="@drawable/toggle_style"
+        android:layout_below="@id/BtnBoton3" />
 
-</LinearLayout>
+    <LinearLayout
+        android:id="@+id/BarraBtnSinBorde"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:showDividers="middle"
+        android:divider="?android:dividerVertical"
+        android:dividerPadding="6dp"
+        android:layout_below="@+id/BtnBoton4">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="@string/texto_de_prueba"/>
+
+        <ImageButton android:id="@+id/BtnSinBorde"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/icono_ok"
+            android:src="@drawable/ic_estrella"
+            style="?android:borderlessButtonStyle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BarraBotones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        style="?android:attr/buttonBarStyle">
+
+        <Button android:id="@+id/BtnAceptar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Aceptar"
+            style="?android:attr/buttonBarButtonStyle" />
+
+        <Button android:id="@+id/BtnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/Cancelar"
+            style="?android:attr/buttonBarButtonStyle" />
+
+    </LinearLayout>
+
+</RelativeLayout>
