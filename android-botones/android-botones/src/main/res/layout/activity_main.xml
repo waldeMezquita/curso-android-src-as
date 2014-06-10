@@ -13,41 +13,46 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true" />
 
-    <Button android:id="@+id/BtnBoton1"
+    <Button android:id="@+id/BtnBotonSimple"
         android:text="@string/click"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/LblMensaje" />
 
-    <Button android:id="@+id/BtnBoton5"
+    <Button android:id="@+id/BtnBotonMasImagen"
         android:text="@string/click"
         android:drawableLeft="@drawable/ic_estrella"
         android:drawablePadding="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/BtnBoton1" />
+        android:layout_below="@id/BtnBotonSimple" />
 
-    <ToggleButton android:id="@+id/BtnBoton2"
+    <ToggleButton android:id="@+id/BtnToggle"
         android:textOn="@string/on"
         android:textOff="@string/off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/BtnBoton5" />
+        android:layout_below="@id/BtnBotonMasImagen" />
 
-    <ImageButton android:id="@+id/BtnBoton3"
+    <Switch android:id="@+id/BtnSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/BtnToggle"/>
+
+    <ImageButton android:id="@+id/BtnImagen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/icono_ok"
         android:src="@drawable/ic_estrella"
-        android:layout_below="@id/BtnBoton2" />
+        android:layout_below="@id/BtnSwitch" />
 
-    <ToggleButton android:id="@+id/BtnBoton4"
+    <ToggleButton android:id="@+id/BtnPersonalizado"
         android:textOn="@string/on"
         android:textOff="@string/off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/toggle_style"
-        android:layout_below="@id/BtnBoton3" />
+        android:layout_below="@id/BtnImagen" />
 
     <LinearLayout
         android:id="@+id/BarraBtnSinBorde"
@@ -57,7 +62,7 @@
         android:showDividers="middle"
         android:divider="?android:dividerVertical"
         android:dividerPadding="6dp"
-        android:layout_below="@+id/BtnBoton4">
+        android:layout_below="@+id/BtnPersonalizado">
 
         <TextView
             android:layout_width="wrap_content"

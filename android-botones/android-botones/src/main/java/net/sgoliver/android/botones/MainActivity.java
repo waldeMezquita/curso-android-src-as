@@ -7,17 +7,19 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
 public class MainActivity extends Activity {
 
     private TextView lblMensaje;
-    private Button btnBoton1;
-    private Button btnBoton5;
-    private ToggleButton btnBoton2;
-    private ImageButton btnBoton3;
-    private ToggleButton btnBoton4;
+    private Button btnBotonSimple;
+    private Button btnBotonMasImagen;
+    private ToggleButton btnToggle;
+    private Switch btnSwitch;
+    private ImageButton btnImagen;
+    private ToggleButton btnPersonalizado;
     private ImageButton btnSinBorde;
     private Button btnAceptar;
     private Button btnCancelar;
@@ -29,54 +31,66 @@ public class MainActivity extends Activity {
 
         lblMensaje = (TextView)findViewById(R.id.LblMensaje);
 
-        btnBoton1 = (Button)findViewById(R.id.BtnBoton1);
+        btnBotonSimple = (Button)findViewById(R.id.BtnBotonSimple);
 
-        btnBoton1.setOnClickListener(new View.OnClickListener() {
+        btnBotonSimple.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0)
             {
-                lblMensaje.setText("Botón 1 pulsado!");
+                lblMensaje.setText("Botón Simple pulsado!");
             }
         });
 
-        btnBoton5 = (Button)findViewById(R.id.BtnBoton5);
+        btnBotonMasImagen = (Button)findViewById(R.id.BtnBotonMasImagen);
 
-        btnBoton5.setOnClickListener(new View.OnClickListener() {
+        btnBotonMasImagen.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0)
             {
-                lblMensaje.setText("Botón 5 pulsado!");
+                lblMensaje.setText("Botón texto+imagen pulsado!");
             }
         });
 
-        btnBoton2 = (ToggleButton)findViewById(R.id.BtnBoton2);
+        btnToggle = (ToggleButton)findViewById(R.id.BtnToggle);
 
-        btnBoton2.setOnClickListener(new View.OnClickListener() {
+        btnToggle.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0)
             {
-                if(btnBoton2.isChecked())
-                    lblMensaje.setText("Botón 2: ON");
+                if(btnToggle.isChecked())
+                    lblMensaje.setText("Botón Toggle: ON");
                 else
-                    lblMensaje.setText("Botón 2: OFF");
+                    lblMensaje.setText("Botón Toggle: OFF");
             }
         });
 
-        btnBoton3 = (ImageButton)findViewById(R.id.BtnBoton3);
+        btnSwitch = (Switch)findViewById(R.id.BtnSwitch);
 
-        btnBoton3.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0)
-            {
-                lblMensaje.setText("Botón 3 pulsado!");
-            }
-        });
-
-        btnBoton4 = (ToggleButton)findViewById(R.id.BtnBoton4);
-
-        btnBoton4.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0)
-            {
-                if(btnBoton4.isChecked())
-                    lblMensaje.setText("Botón 4: ON");
+        btnSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(btnSwitch.isChecked())
+                    lblMensaje.setText("Botón Switch: ON");
                 else
-                    lblMensaje.setText("Botón 4: OFF");
+                    lblMensaje.setText("Botón Switch: OFF");
+            }
+        });
+
+        btnImagen = (ImageButton)findViewById(R.id.BtnImagen);
+
+        btnImagen.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0)
+            {
+                lblMensaje.setText("Botón Imagen pulsado!");
+            }
+        });
+
+        btnPersonalizado = (ToggleButton)findViewById(R.id.BtnPersonalizado);
+
+        btnPersonalizado.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View arg0)
+            {
+                if(btnPersonalizado.isChecked())
+                    lblMensaje.setText("Botón Personalizado: ON");
+                else
+                    lblMensaje.setText("Botón Personalizado: OFF");
             }
         });
 
