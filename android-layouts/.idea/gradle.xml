@@ -7,8 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="C:\Users\Salvador\Proyectos\curso-android\curso-android-src-as\android-layouts" />
-            <option value="C:\Users\Salvador\Proyectos\curso-android\curso-android-src-as\android-layouts\android-layouts" />
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/android-layouts" />
           </set>
         </option>
       </GradleProjectSettings>
