@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tabs</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="contenido_tab_1">Contenido Tab 1</string>
+    <string name="contenido_tab_2">Contenido Tab 2</string>
+
+</resources>
